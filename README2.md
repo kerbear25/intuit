@@ -1,6 +1,6 @@
 <!-- TODO: Handle post -->
-<!-- TODO: Add toast for new comment added -->
 <!-- TODO: Display new comment at the top of the existing comments when posted -->
+<!-- TODO: GET comments -->
 <!-- TODO: Unit tests -->
 
 # Getting Started
