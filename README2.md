@@ -1,4 +1,3 @@
-<!-- TODO: Handle post -->
 <!-- TODO: Display new comment at the top of the existing comments when posted -->
 <!-- TODO: GET comments -->
 <!-- TODO: Unit tests -->
@@ -27,4 +26,5 @@ npm run dev
 ## Future Functionality/Refactoring
 
 - Storing HEX values in variables and re-using them instead of repeating them
+- Validate name field (i.e. do not allow duplicate names). This might work best with a login feature.
 - If a user is logged in and they see their own comment(s), they could delete the comment(s). Then, a confirmation could appear to confirm or cancel the action. Finally, a toast notification could appear to notify whether the comment was deleted and the action was successful.
