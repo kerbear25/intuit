@@ -11,6 +11,14 @@ npm i
 npm run dev
 ```
 
+## UI
+
+Getting comments/homepage:
+![comments](comments.png)
+
+Posting a new comment:
+![newComment](newComment.png)
+
 ## Testing
 
 To run tests, run `npm test`. This will run tests for the API.
