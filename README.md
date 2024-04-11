@@ -1,66 +1,33 @@
-# Front-end Choose Your Own Adventure Take-Home
+# Getting Started
 
-Design and build a comments feed that displays all comments and notifies a user in real-time when new comments are added.
-
-Here is the data schema for a Comment:
-* id: INTEGER
-* name: TEXT
-* created: DATETIME
-* message: TEXT
-
-Here are the API endpoints:
-* Create a comment: /createComment (POST)
-* Retrieve all comments: /getComments (GET)
-* Retrieve a comment: /getComment (GET)
-* Delete all comments: /deleteComments (DELETE)
-  * This is useful for purging data
-
-This is a basic wireframe, you can change the layout. While you won't be screened as a product designer, make sure you build a good user experience. If you decide to use a third-party design system, be prepared to discuss your decision.
-
-![Basic wireframe](wireframe.png)
-
-Please write unit tests and handle errors where you see fit.
-
-## Engineering Style
-
-We do not expect you to have expertise in all the topics that encapsulate front-end web development. We recognize that some folks are specialists and others are generalists!
-
-### Specialist
-
-If there's a particular topic you enjoy, you can focus your assignment solution on that!
-
-Some examples include:
-* Performance optimizations
-* Accessibility
-* Integration testing
-
-### Generalist
-
-If you're a generalist, you can focus more on building the minimum viable product described above with the wireframe!
-
-## Interview Details
-
-We have already set up an API client for a Node Express server that stores comments in SQLite.
-
-You have the option of doing the assignment with or without a front-end JS framework.
-
-If you decide to use a framework, we recommend the following boilerplates:
-* [facebook/create-react-app](https://github.com/facebook/create-react-app)
-* [vuejs/vue-cli](https://github.com/vuejs/vue-cli)
-* [angular/angular-cli](https://github.com/angular/angular-cli)
-* [ember-cli/ember-cli](https://github.com/ember-cli/ember-cli)
-
-Be prepared to have a discussion about your implementation. Here are some example discussion questions:
-* How can you optimize fetching new comments in real-time?
-* Are there any restrictions we should place on the comment input?
-
-We recommend spending up to four hours on this assignment. If you don't get every piece you hoped completed done in the timeframe, that's alright! We'll be having an hour long discussion on your thought processes and where you might spend more time, and that discussion is a key part of our evaluation!
-
-## Usage
-
-### Run in Development
+Welcome! To get started, run:
 
 ```
-$ npm install
-$ npm run dev
+cd client/
+npm i
+npm start
+cd ..
+npm i
+npm run dev
 ```
+
+## Testing
+
+To run tests, run `npm test`. This will run tests for the API.
+
+I wanted to test rendering the React components. However, I ran into some configuration errors in `/client`. The first error that I tried resolving was a `SyntaxError: Cannot use import statement outside a module`. I tried following these steps in the [Jest Getting Started documentation](https://jestjs.io/docs/getting-started), as well as in [this Stack Overflow answer](https://stackoverflow.com/questions/58613492/how-to-resolve-cannot-use-import-statement-outside-a-module-from-jest-when-run), but that did not resolve the error. I spent quite some time trying to get this resolved, but due to time constraints, I decided to write tests for the API.
+
+## Assumptions
+
+- In the wireframe, the two example comments show "Thursday at 4pm" and "April 1st at 2pm". I was unclear whether these dates and times were rounded or exact. For the purpose of this exercise, I chose to display the exact date and time. However, with more conversation, I could have implemented a different date and time rendering.
+
+## Questions
+
+- Since the GET endpoint was provided for a single comment, I'm wondering what the use of this could be.
+
+## Future Functionality/Refactoring
+
+- Handle showing errors on GET request for /getComments
+- Storing HEX values in variables and re-using them instead of repeating them
+- Validate name field (i.e. do not allow duplicate names). This might work best with a login feature.
+- If a user is logged in and they see their own comment(s), they could delete the comment(s). Then, a confirmation could appear to confirm or cancel the action. Finally, a toast notification could appear to notify whether the comment was deleted and the action was successful.
