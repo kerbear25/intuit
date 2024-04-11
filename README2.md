@@ -1,6 +1,3 @@
-<!-- TODO: Display new comment at the top of the existing comments when posted -->
-<!-- TODO: Unit tests -->
-
 # Getting Started
 
 Welcome! To get started, run:
@@ -13,6 +10,10 @@ cd ..
 npm i
 npm run dev
 ```
+
+## Testing
+
+I ran into some configuration errors in `/client`. The first error that I tried resolving was a `SyntaxError: Cannot use import statement outside a module`. I tried following these steps in the [Jest Getting Started documentation](https://jestjs.io/docs/getting-started), as well as in [this Stack Overflow answer](https://stackoverflow.com/questions/58613492/how-to-resolve-cannot-use-import-statement-outside-a-module-from-jest-when-run), but that did not resolve the error. I spent quite some time trying to get this resolved, but due to time constraints, I decided to write tests for the API.
 
 ## Assumptions
 
